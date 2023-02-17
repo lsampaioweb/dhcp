@@ -1,9 +1,8 @@
-# {project_name}
-Description XXX.
+# DHCP Server
+Project that will create the VMs that will work as the DHCP servers of the HomeLab.
+
 
 # Scripts:
-[Packer](packer/ "Packer")
-
 [Terraform](terraform/ "Terraform")
 
 [Ansible](ansible/ "Ansible")
