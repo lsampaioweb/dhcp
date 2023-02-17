@@ -3,4 +3,4 @@
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ufw.yml"
   vars:
     rules:
-      - {rule: "allow", name: "Bind9", comment: "Allow DNS for All"}
+      - {rule: "allow", proto: "udp", to_port: "67", comment: "Allow DHCP"}

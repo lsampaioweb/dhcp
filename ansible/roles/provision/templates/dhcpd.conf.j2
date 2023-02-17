@@ -1,0 +1,28 @@
+failover peer "dhcp-failover" {
+  primary|secondary;                    # Declared Primary DHCP Server
+  address 10.0.1.10;          # Primary DHCP Server IP
+  port 847;
+  peer address 10.0.1.11;     # Secondary DHCP Server IP
+  peer port 647;
+  max-reponse-delay 60;
+  max-unacked-updates 10;
+  mclt 3600;                  # defined only on the primary DHCP server
+  split 255;                  # defined only on the primary DHCP server
+  load balance max seconds 5;
+}
+
+option domain-name "homelab";
+option domain-name-servers 10.0.4.4;
+default-lease-time 3600; 
+max-lease-time 7200;
+authoritative;
+
+subnet 10.0.5.0 netmask 255.255.255.240 {
+  option routers 10.0.5.1;
+  option subnet-mask 255.255.255.240;
+  option domain-search "homelab";
+  pool { 
+    failover peer "dhcp-failover";
+    range 10.0.5.6 10.0.5.14; 
+  }
+}
