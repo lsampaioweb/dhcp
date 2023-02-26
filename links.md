@@ -7,3 +7,5 @@
 1. [A Step-By-Step Guide To Set Up A DHCP Server On Ubuntu](https://www.linuxfordevices.com/tutorials/ubuntu/dhcp-server-on-ubuntu)
 
 1. [DHCP : Configure DHCP Server](https://www.server-world.info/en/note?os=Ubuntu_22.04&p=dhcp&f=1)
+
+1. [How to set up DHCP Dynamic DNS on Ubuntu](https://www.techtutorials.tv/sections/linux/how-to-set-up-dhcp-dynamic-dns-on-ubuntu/)
