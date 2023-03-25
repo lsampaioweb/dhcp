@@ -10,9 +10,9 @@ vm_instances = {
         tag = 4
       }
     }
-    clone     = "ubuntu-22-04-server-raw"
-    os_type   = "cloud-init"
-    ipconfig0 = "ip=dhcp"
+    cloud_init = {
+      ipconfig0 = "ip=10.0.4.6/27,gw=10.0.4.1"
+    }
 
     # Project
     state    = "MASTER"
@@ -26,9 +26,9 @@ vm_instances = {
         tag = 4
       }
     }
-    clone     = "ubuntu-22-04-server-raw"
-    os_type   = "cloud-init"
-    ipconfig0 = "ip=10.0.4.5/27,gw=10.0.4.1"
+    cloud_init = {
+      ipconfig0 = "ip=10.0.4.7/27,gw=10.0.4.1"
+    }
 
     # Project
     state    = "BACKUP"
