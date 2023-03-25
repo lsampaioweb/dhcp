@@ -4,6 +4,7 @@ module "homelab_project" {
 
   project      = var.project
   environment  = var.environment
+  
   vm_instances = var.vm_instances
 }
 
