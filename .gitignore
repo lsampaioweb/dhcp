@@ -7,3 +7,4 @@
 
 # This project has a dynamic hosts file, so it keeps changing.
 hosts
+.ansible
